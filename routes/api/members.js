@@ -34,6 +34,7 @@ router.post('/', (req, res)=> {
   members.push(newMember);
 
   res.json(members);
+  // res.redirect('/')
 });
 
 //update member
@@ -69,4 +70,5 @@ router.delete('/:id', (req, res) =>{
     res.status(400).json({ msg: `No member with the id of ${req.params.id}`})
   }
 });
+
 module.exports = router;
